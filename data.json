@@ -1,9 +1,9 @@
 [
-    ["surprised_me",  "Mohil Kapuriya", "Chemical", 2024, "https://in.linkedin.com/in/mohil-kapuriya-556a7a228"],
+    ["Surprised_me",  "Mohil Kapuriya", "Chemical", 2024, "https://in.linkedin.com/in/mohil-kapuriya-556a7a228"],
     ["rushil_pm", "Rushil Motwani", "ECE", 2024, "https://www.linkedin.com/in/rushil-motwani-995209226"],
     ["chessnerd8892", "Sahil balhara", "Civil", 2025, ""],
     ["tusharstarji", "Tushar Singh", "Economics", 2027, ""],
-    ["Demon_70_05", "Aditya mittal", "Mechanical", 2022, "https://in.linkedin.com/in/aditya-mittal-12490819a"],
+    ["demon_70_05", "Aditya mittal", "Mechanical", 2022, "https://in.linkedin.com/in/aditya-mittal-12490819a"],
     ["GSSSJ", "Gurleen Singh Sandhu", "Civil", 2023, ""],
     ["deepaksharma0505", "Deepak Sharma", "Mechanical", 2024, "https://www.linkedin.com/in/deepak-sharma-40a8781b8"],
     ["dustytwig", "Ankit Kumar", "Chemical", 2024, "https://www.linkedin.com/in/ankit-k-6879b21ba"],
@@ -70,3 +70,4 @@
     ["laabhanvi_jain", "Laabhanvi Jain", "Metallurgical and Materials Engineering", 2028, ""],
     ["Deepika11111", "Ajmera Deepika", "ECE", 2027, ""]
 ]
+
