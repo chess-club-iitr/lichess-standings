@@ -10,7 +10,7 @@ fetch('./data.json')
     query = "";
     info = [];
     url = "https://lichess.org/api/users";
-    dataTemp = [];
+    dataMap = {};
 
     t1 = document.getElementById("standingsCurrBlitz");
     t2 = document.getElementById("standingsCurrBullet");
@@ -20,11 +20,11 @@ fetch('./data.json')
     for(let i = 0; i < data.length; i++){
         if(curr && data[i][3]<currAcadYear) continue;
         query += data[i][0] + ',';
-        dataTemp.push(data[i]);
+        dataMap[data[i][0]] = data[i];
     }
 
     query = query.slice(0, -1); 
-    data = dataTemp;
+    // data = dataTemp;
 
     fetch(url, {
         method: "POST",
@@ -37,11 +37,12 @@ fetch('./data.json')
     .then(json => {
 
         for(let i = 0; i < json.length; i++){
+            currData = dataMap[json[i].username];
+            if(currData == null) continue;
             ratings = getRatings(json[i]);
             if(ratings === null) continue;
 
-            arr = [data[i][1], json[i].username, ratings[0], ratings[1], ratings[2], data[i][2], data[i][3], data[i][4], timeDifference(Date.now(),json[i].seenAt)];
-
+            arr = [currData[1], json[i].username, ratings[0], ratings[1], ratings[2], currData[2], currData[3], currData[4], timeDifference(Date.now(),json[i].seenAt)];
             info.push(arr);
         }
 
@@ -487,4 +488,5 @@ function displayRapid(info){
         setPopUpPhone(row.cells[0],info[i-1][9],info[i-1][0],info[i-1][5],info[i-1][6],info[i-1][1],info[i-1][8],info[i-1][7],rapidTablePhone);
         setPopUpPhone(row.cells[1],info[i-1][9],info[i-1][0],info[i-1][5],info[i-1][6],info[i-1][1],info[i-1][8],info[i-1][7],rapidTablePhone);
     }
+
 }
